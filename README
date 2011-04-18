@@ -1,6 +1,8 @@
 This is a World Clock app for the inPulse watch (http://www.getinpulse.com/).
 You will need the inPulse SDK to compile and load it.
 
+Video demo: http://vimeo.com/22541231
+
 Major limitations of the app at this time, that I have no plans to address:
 - The watch's local time zone is hard coded. See include/timezone.h
 - No handling whatsoever of daylight savings time.
