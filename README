@@ -1,0 +1,21 @@
+This is a World Clock app for the inPulse watch (http://www.getinpulse.com/).
+You will need the inPulse SDK to compile and load it.
+
+Major limitations of the app at this time, that I have no plans to address:
+- The watch's local time zone is hard coded. See include/timezone.h
+- No handling whatsoever of daylight savings time.
+There may be other bugs too; reports (or forks!) are welcome.
+
+The rendering of day and night is fairly realistic according to the current
+time and season. The textures come from NASA's "Blue Marble" dataset:
+http://visibleearth.nasa.gov/view_set.php?categoryID=2363
+
+The app depends on a manually 'hacked' resources file and low-level access
+to the watch's resource memory to work. This means:
+- The resource file resources/inpulse_resources_customized.bin must be loaded.
+- It depends on a private API, and may break if that API changes.
+- Therefore it probably doesn't work in the inPulse simulator. I haven't tried.
+- resource_packer.py is not sufficient to rebuild the resource file.
+  When I get a chance (or given sufficient cajoling) I will clean up and
+  release the various scripts I used to build the resource file.
+
